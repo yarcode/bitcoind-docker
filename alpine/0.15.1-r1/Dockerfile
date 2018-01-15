@@ -15,7 +15,7 @@ RUN echo "@community http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/
 RUN apk add --update --no-cache bash bitcoin@community=${BITCOIN_VERSION}
 
 COPY docker-entrypoint.sh /usr/bin/
-RUN chmod +x¬ /usr/bin/docker-entrypoint.sh
+RUN chmod +x /usr/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 CMD ["bitcoind"]
