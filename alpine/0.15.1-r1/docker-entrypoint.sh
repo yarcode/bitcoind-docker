@@ -8,6 +8,7 @@ if [ "$1" = 'bitcoind' ]; then
     if [[ ! -s "$BITCOIN_DATA/bitcoin.conf" ]]; then
 		cat <<-EOF > "$BITCOIN_DATA/bitcoin.conf"
 		testnet=${BITCOIN_TESTNET:-0}
+		regtest=${BITCOIN_REGTEST:-0}
 		rpcport=${BITCOIN_RPC_PORT:-8332}
 		rpcuser=${BITCOIN_RPC_USER:-rpcuser}
 		rpcpassword=${BITCOIN_RPC_PASSWORD:-rpcpass}
